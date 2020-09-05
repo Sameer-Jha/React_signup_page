@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+
+// Importing components
+import Header from "./components/header";
+import Login from "./components/login";
+import Hero from "./components/hero";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  let [login, setLogin] = useState(false);
+  if (login) {
+    return (
+      <div className="App">
+        <Header />
+        <Hero />
+      </div>
+    );
+  } else {
+    return (
+      <div className="App">
+        <Header />
+        <Login setLogin={setLogin} />
+      </div>
+    );
+  }
 }
 
 export default App;
