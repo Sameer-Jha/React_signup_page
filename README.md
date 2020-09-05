@@ -2,6 +2,7 @@
 
 ## Live at: https://sameer-jha.github.io/React_signup_page/
 
+>  This is a SignUp page made using React Js and had integrated Facebook Login. It uses Axion for sending the http requests to reqres as well as uses Tailwind CSS for the front end library.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
